@@ -1,3 +1,8 @@
+# fullsend per-repo configuration
+# https://github.com/fullsend-ai/fullsend
+#
+# This file configures fullsend for per-repo installation mode.
+# See ADR 0033 for details.
 version: "1"
 runtime: dummy
 roles:
@@ -13,6 +18,8 @@ agents:
     - name: disabled-ping
       source: harness/disabled-ping.yaml
       enabled: false
+    - name: fork-pr-ping
+      source: harness/fork-pr-ping.yaml
 allowed_remote_resources:
     - https://raw.githubusercontent.com/fullsend-ai/fullsend/
     - https://raw.githubusercontent.com/fullsend-ai/agents/
